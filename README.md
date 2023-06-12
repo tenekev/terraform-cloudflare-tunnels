@@ -13,7 +13,7 @@
 
 The whole setup should take no more than a minute.
 
-### 📝 Commands used in this project
+## 📝 Commands used in this project
 ```bash
 # Initializing/upgrading the project
 terraform init -upgrade
@@ -28,6 +28,7 @@ terraform apply -auto-approve
 terraform apply -destroy -auto-approve
 
 ```
+## Relevant Documentation
 
 ### 🌟 Terraform Docker Provider
 * [Documentation](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/container)
