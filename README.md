@@ -9,7 +9,7 @@
 3. Set up Cloudflared container.
     Upon starting, its given a token that was defined in Step 1. It connects to Cloudflare and pulls the config.
 
-The whole setup should tanke no more than a minute.
+The whole setup should take no more than a minute.
 
 ### 📝 Commands used in this project
 ```bash
