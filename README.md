@@ -6,7 +6,7 @@
     This can be done locally with a config.yaml file but we are doing it through Cloudflare itself. Every time the CloudflareD container starts it will pull down the relevant configuration.
 
 2. Set up the proper DNS records for our tunnel.
-    Just like the tunnel's ingress rules, the DNS records will be defined recusively, based on the predefined varaibles.
+    Both the tunnel's **ingress rules** and the **DNS records** will be defined recusively, based on the predefined varaibles.
 
 3. Set up Cloudflared container.
     Upon starting, its given a token that was defined in Step 1. It connects to Cloudflare and pulls the config.
