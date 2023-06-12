@@ -18,7 +18,8 @@ The whole setup should take no more than a minute.
 # Initializing/upgrading the project
 terraform init -upgrade
 
-# If add the docker nextwork for cloudlared & other containers if it exists.
+# Imports the docker nextwork "cloudflared_network" for cloudlared & other containers if it exists.
+# On first run, this shouldn't be a problem.
 # Here is a one-liner, you need to supply the network name.
 docker network inspect <network name> -f "{{json .Id }}" | terraform import docker_network.cloudflared_network _
 
