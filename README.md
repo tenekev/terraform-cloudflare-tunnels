@@ -27,8 +27,44 @@ terraform apply -auto-approve
 
 # Should destroy everything but the Docker network because it's probably used by other containers.
 terraform apply -destroy -auto-approve
-
 ```
+
+## Variables used in this project
+Rename the `variables.auto.tfvars.example` to `variables.auto.tfvars` and fill it in.
+```py
+# Credentials
+  # Either
+    CF_email = "username@email.tld"
+    # Use global Global API Key from https://dash.cloudflare.com/profile/api-tokens
+    CF_apikey = ""
+
+  # Or
+    # Generate an API token from https://dash.cloudflare.com/profile/api-tokens
+    # Must have enabled:
+    #   Zones.DNS
+    #   Account.Cloudflare Tunnel
+    #   Account.Account Settings
+    CF_apitoken = ""
+
+# Custom tunnel name.
+  CF_tunnel_name = "some-cool-name"
+
+# Domain to manage.
+  DOMAIN = "yourdomain.tld"
+
+# Map of services and subdomains. The service url is from the docker network.
+  SUBDOMAINS = [
+    {
+      "subdomain":"example1",
+      "service":"http://container_name:80"
+    },
+    {
+      "subdomain":"example2",
+      "service":"http://container_name:8080"
+    }
+  ]
+```
+
 ## Relevant Documentation
 
 ### 🌟 Terraform Docker Provider
