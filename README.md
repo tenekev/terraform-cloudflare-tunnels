@@ -1,3 +1,5 @@
+![Header](scheme.drawio.png)
+
 ## General outline of the project
 
 1. Set up a Cloudflare tunnel and configure it remotely.
