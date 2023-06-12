@@ -21,7 +21,7 @@ terraform init -upgrade
 # Imports the docker nextwork "cloudflared_network" for cloudlared & other containers if it exists.
 # On first run, this shouldn't be a problem.
 # Here is a one-liner, you need to supply the network name.
-docker network inspect <network name> -f "{{json .Id }}" | terraform import docker_network.cloudflared_network _
+docker network inspect cloudflared_network -f "{{json .Id }}" | terraform import docker_network.cloudflared_network _
 
 terraform apply -auto-approve
 
