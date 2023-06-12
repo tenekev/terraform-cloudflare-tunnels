@@ -1,0 +1,32 @@
+# Credentials
+  # Either
+    CF_email="username@email.tld"
+    # Use global Global API Key
+    # https://dash.cloudflare.com/profile/api-tokens
+    CF_apikey=""
+
+  # Or
+    # https://dash.cloudflare.com/profile/api-tokens
+    # Must have enabled:
+    #   Zones.DNS
+    #   Account.Cloudflare Tunnel
+    #   Account.Account Settings
+    CF_apitoken = ""
+
+# Custom tunnel name
+  CF_tunnel_name="some-cool-name"
+
+# Domain to manage
+  DOMAIN="yourdomain.tld"
+
+# Map of services and subdomains
+  SUBDOMAINS=[
+    {
+      "subdomain":"example1",
+      "service":"http://container_name:80"
+    },
+    {
+      "subdomain":"example2",
+      "service":"http://container_name:8080"
+    }
+  ]
